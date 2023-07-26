@@ -1,5 +1,7 @@
 # Neovim config
 
+This is inspired from [ThePrimeagen](https://github.com/ThePrimeagen) guide in YouTube [link](https://www.youtube.com/watch?v=w7i4amO_zaE).
+
 ## Requirements:
 
 - Installed [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
@@ -27,3 +29,9 @@ set CC = clang
 - Nvim version: v0.9.1
 - Os: Windows 11 Pro (x86)
 - Run on [Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701)
+
+## Usefull commands:
+
+- `:TSInstall server` for updating packages. Ex: `:TSInstall lua`.
+- `:Mason` for installing and checking LSP servers.
+- `:checkhealth` if you have any problem this will help you to find the problem. You can also run with a Plugin like this: `:checkhealth treesitter`
