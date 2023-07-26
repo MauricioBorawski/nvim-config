@@ -1,4 +1,4 @@
-# Neovim config
+# Neovim Config
 
 This is inspired from [ThePrimeagen](https://github.com/ThePrimeagen) guide in YouTube [link](https://www.youtube.com/watch?v=w7i4amO_zaE).
 
