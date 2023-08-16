@@ -17,11 +17,26 @@ require('lspconfig').eslint.setup({
             enable = true,
         }
 
+        -- Definir función para corregir errores con un comando
+        local function fix_errors()
+            vim.lsp.buf.execute_command({
+                command = '_typescript.applyCodeAction',
+                arguments = { bufnr, {} }
+            })
+        end
+
+        vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-z>', fix_errors, { noremap = true, silent = true })
+
+
         -- Set up eslint config
         client.resolved_capabilities.eslintConfig = {
             root = vim.fn.expand('%:p:h'),
             extends = '.eslintrc.js',
         }
+
+        lspconfig.eslint.setup({
+            on_attach = on_attach,
+        })
     end,
 })
 
