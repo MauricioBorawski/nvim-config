@@ -83,19 +83,12 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader><leader>", function() vim.diagnostic.open_float() end, opts)
     vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-    vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, opts)
+    vim.keymap.set("n", "<C-z>", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>gr", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
     vim.keymap.set('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
 end)
-
-vim.api.nvim_set_keymap(
-    "n",
-    "<C-z>",
-    "<cmd>lua vim.lsp.buf.formatting()<CR>",
-    { noremap = true, silent = true }
-)
 
 lsp.setup()
 
