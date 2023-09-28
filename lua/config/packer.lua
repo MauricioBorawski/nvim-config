@@ -23,6 +23,12 @@ return require('packer').startup(function(use)
 
     use { "catppuccin/nvim", as = "catppuccin" }
 
+    use { "rebelot/kanagawa.nvim", as = 'kanagawa' }
+
+    use { "savq/melange-nvim", as = 'melange' }
+
+    -- No Colors
+
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
     use({
@@ -70,9 +76,9 @@ return require('packer').startup(function(use)
     use("lewis6991/gitsigns.nvim")
 
     use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-}
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 end)
