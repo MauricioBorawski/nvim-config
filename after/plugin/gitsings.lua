@@ -1,7 +1,11 @@
+vim.cmd([[:highlight CustomSignsAdd guifg=#a4cf69]])
+vim.cmd([[:highlight CustomSignsChange guifg=#63c1e6]])
+vim.cmd([[:highlight CustomSignsDelete guifg=#d74f56]])
+
 require('gitsigns').setup {
   signs = {
-    add          = { text = '│' },
-    change       = { text = '│' },
+    add          = { text = '▍' },
+    change       = { text = '▍' },
     delete       = { text = '_' },
     topdelete    = { text = '‾' },
     changedelete = { text = '~' },
@@ -15,7 +19,7 @@ require('gitsigns').setup {
     follow_files = true
   },
   attach_to_untracked = true,
-  current_line_blame = false, -- Toggle with `:Gitsigns toggle_current_line_blame`
+  current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
   current_line_blame_opts = {
     virt_text = true,
     virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'

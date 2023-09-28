@@ -81,4 +81,6 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+
+    use("petertriho/nvim-scrollbar")
 end)
