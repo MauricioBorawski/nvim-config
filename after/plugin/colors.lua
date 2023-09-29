@@ -1,11 +1,21 @@
-local colors = { "rose-pine", "catppuccin-mocha", "kanagawa", "melange" }
+function SetTheme()
+    local colors = { "rose-pine", "catppuccin-mocha", "kanagawa", "melange" }
+    local colorTheme = "kanagawa"
 
-function SetTheme(color)
-    local colorTheme = color or 'catppuccin-mocha'
+    print("Hello from colors! What theme do you want to use today?")
 
-    if color == 'random' then
-        colorTheme = colors[math.random(#colors)]
+    for i, color in ipairs(colors) do
+        print(i, color)
     end
+
+    local choice = tonumber(vim.fn.input("Choose a theme: "))
+
+    if choice == "" or choice > #colors then
+        print("\n No theme chosen, using default")
+    else
+        colorTheme = colors[choice]
+    end
+
 
     vim.cmd.colorscheme(colorTheme)
 
