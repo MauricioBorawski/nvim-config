@@ -6,11 +6,16 @@ This is a more simplified version but watching the video is a must to understand
 ## Requirements:
 
 - Install [ripgrep](https://github.com/BurntSushi/ripgrep#installation)
+- Packer 
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
 
 ## Setup:
 1. Install [Neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 2. Depending on your os you should clone this repo in the following directories:
-### MacOs
+### MacOs & Ubuntu
 `~/.config/`
 
 ### Windows
