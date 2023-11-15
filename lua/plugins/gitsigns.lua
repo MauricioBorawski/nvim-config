@@ -9,15 +9,6 @@ return {
       changedelete = { text = "▎" },
       untracked = { text = "▎" },
     },
-
-    on_attach = function(buffer)
-      local gs = package.loaded.gitsigns
-
-      local function map(mode, l, r, desc)
-        vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
-      end
-
-    -- stylua: ignore start
-    end,
+    current_line_blame = true,
   },
 }
