@@ -1,0 +1,1 @@
+# New configuration for LazyVim
