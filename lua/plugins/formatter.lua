@@ -13,6 +13,7 @@ return {
           typescriptreact = { "prettier" },
           python = { "black" },
           lua = { "stylua" },
+        json = { "prettier", "prettierd" },
         },
       })
 
