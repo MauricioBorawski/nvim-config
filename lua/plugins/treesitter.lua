@@ -17,6 +17,7 @@ return {
           "javascript",
           "html",
           "markdown",
+          "astro",
         },
         sync_install = false,
         highlight = { enable = true },
