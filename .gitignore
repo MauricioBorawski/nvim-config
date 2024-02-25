@@ -1,4 +1,4 @@
 /plugin
 .DS_STORE
 pack
-./lazy-lock.json
+lazy-lock.json
