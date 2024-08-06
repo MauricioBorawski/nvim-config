@@ -17,5 +17,9 @@ return {
         end,
       },
     },
+    {
+      "echasnovski/mini.pairs",
+      version = false,
+    },
   },
 }
