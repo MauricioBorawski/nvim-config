@@ -26,3 +26,10 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+
+vim.opt.colorcolumn = "80"
+
+vim.o.wrap = true
+vim.o.linebreak = true
+vim.o.showbreak = "↪"
+vim.o.breakindent = true

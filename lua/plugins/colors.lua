@@ -1,6 +1,6 @@
 return {
   { "ellisonleao/gruvbox.nvim" },
-  { "rebelot/kanagawa.nvim", name = "kanagawa" },
+  { "rebelot/kanagawa.nvim",    name = "kanagawa" },
   { "sainnhe/gruvbox-material", name = "gruvbox-material" },
   {
     "catppuccin/nvim",
@@ -46,7 +46,31 @@ return {
   },
   {
     "folke/tokyonight.nvim",
+    name = "tokyonight",
     lazy = true,
     opts = { style = "moon" },
   },
+  { 'Everblush/nvim', name = 'everblush' },
+  {
+    'ribru17/bamboo.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require('bamboo').setup {
+        -- optional configuration here
+      }
+      require('bamboo').load()
+    end,
+  },
+  {
+    'doums/dark.nvim',
+    name = 'dark',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      local p = require('dark').p
+
+      p.bg = '#2b2b2b'
+    end
+  }
 }
